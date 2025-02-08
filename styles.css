@@ -243,7 +243,7 @@ svg * {
 }
 
 .header_icon_inner {
-  border: var(--border);
+  border-left: var(--border);
   width: 98px;
   height: 99px;
 }
@@ -362,6 +362,7 @@ svg * {
   height: 73px;
   top: 57%;
   right: 13%;
+  translate: -50 0;
   background: url(./icons/dotted-circle.svg) center/contain no-repeat;
 }
 
@@ -657,6 +658,7 @@ svg * {
   left: 17%;
   width: 336px;
   height: 97px;
+  transition: -50%;
   background: url(./icons/dotted-circle.svg) center/contain no-repeat;
 }
 
@@ -677,6 +679,14 @@ svg * {
   align-items: center;
   border: var(--border);
   border-right: none;
+}
+
+.advantages_item:nth-child(1) {
+  border-top: none;
+}
+
+.advantages_item:last-child {
+  border-bottom: none;
 }
 
 .advantages_item_inner {
@@ -834,6 +844,7 @@ svg * {
   display: flex;
   gap: 44px;
   border: var(--border);
+  border-top: none;
 }
 
 .blog_card img {
@@ -1412,8 +1423,12 @@ a:hover {
     grid-template-columns: auto auto;
   }
 
-  .advantages_item_button {
-    font-size: 1rem;
+  .advantages_item_button a{
+    font-size: 0.9rem;
+  }
+
+  .advantages_item_button a::after {
+    left: 60px;
   }
 
   .reserve-form {
